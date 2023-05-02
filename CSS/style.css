@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+progress::-webkit-progress-value {
+  background: red;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100svh;
+}
+
+img {
+  max-width: 100%;
+}
+
+#container_card {
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding: 5%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.14);
+}
+#container_card #container_img, #container_card #container_perfil, #container_card #container_status {
+  margin-bottom: 5%;
+}
+#container_card #container_perfil, #container_card #container_status {
+  text-align: center;
+}
+#container_card #container_perfil h1, #container_card #container_status h1 {
+  margin-bottom: 3%;
+}
+#container_card #container_status {
+  width: 100%;
+  text-align: left;
+}
+#container_card #container_status .container_info {
+  display: flex;
+  justify-content: space-between;
+}
+#container_card #container_status .container_info progress {
+  width: 70%;
+}
+#container_card #container_acoes button {
+  padding: 3%;
+  background-color: rgb(151, 17, 17);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-block: 3%;
+  width: 100%;
+  font-weight: 500;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#container_card #container_acoes button:hover {
+  background-color: white;
+  color: rgb(151, 17, 17);
+}

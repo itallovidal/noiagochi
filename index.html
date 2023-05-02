@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./CSS/style.css">
+    
+    <title> NoiaGochi Game </title>
+
+  </head>
+  <body>
+
+    <main id="container_card">
+      <div id="container_img">
+        <img src="./images/noiazito.png" class="pet" id="pet" alt="imagem">
+      </div>
+      
+      <div id="container_perfil">
+        <h1 id="nome">Zequinha</h1>
+        <i id="idade">20 anos</i>
+      </div>
+
+      <div id="container_status">
+        <h1>Status</h1>
+
+        <div class="container_info">
+          <label for="fome">Fome</label>
+          <progress id="fome" value="100" max="100"> </progress>
+        </div>
+
+        <div class="container_info">
+          <label for="higiene"> Higiene </label>
+          <progress id="higiene" value="100" max="100">  </progress>
+        </div>
+
+        <div class="container_info">
+          <label for="sono"> sono </label>
+          <progress id="sono" value="100" max="100">  </progress>
+        </div>
+        
+        <div class="container_info">
+          <label for="dopamina"> dopamina </label> 
+          <progress id="dopamina" value="100" max="100"> </progress>
+        </div>
+        <div class="container_info">
+          <label for="saude"> Saúde </label> 
+          <progress id="saude" value="100" max="100"></progress>
+        </div>
+      </div>
+
+
+      <div id="container_acoes">
+        <button data-status="1">Comer🍕</button>
+        <button data-status="2">Banho🛀</button>
+        <button data-status="3">Dormir🛌</button>
+        <button data-status="4">Se Drogar🧙👃👽</button>
+        <button data-status="5">Vitamina C🍊</button>
+      </div>
+    </main>
+
+
+    <script src="script.js"></script>
+    <script src="teste.js"></script>
+  </body>
+</html>
