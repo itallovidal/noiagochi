@@ -6,21 +6,28 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- link das fonte video game -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./CSS/noiagochi.css">
+    <link rel="stylesheet" href="./CSS/form.css">
     
     <title> NoiaGochi Game </title>
 
   </head>
   <body>
 
-    <main id="container_card">
+    <main style="display: none;" id="container_card">
       <div id="container_img">
         <img src="./images/normal.png" id="imagemPersonagem" alt="imagem">
       </div>
       
       <div id="container_perfil">
-        <h1 id="nome">Zequinha</h1>
-        <i id="idade">20 anos</i>
+        <h1 id="nome"></h1>
+        <i id="idade"></i>
       </div>
 
       <div id="container_status">
@@ -53,15 +60,42 @@
 
 
       <div id="container_acoes">
-        <button data-status="1">Comer🍕</button>
-        <button data-status="2">Banho🛀</button>
-        <button data-status="3">Dormir🛌</button>
-        <button data-status="4">Se Drogar🧙👃👽</button>
-        <button data-status="5">Vitamina C🍊</button>
+        <button class="btn-interacao" data-status="1">Comer🍕</button>
+        <button class="btn-interacao" data-status="2">Banho🛀</button>
+        <button class="btn-interacao" data-status="3">Dormir🛌</button>
+        <button class="btn-interacao" data-status="4">Se Drogar🧙👃👽</button>
+        <button class="btn-interacao" data-status="5">Vitamina C🍊</button>
       </div>
+    </main>
+
+    <main id="container_home">
+      <article id="container_img">
+        <img src="./images/fundohome.png" alt="">
+      </article>
+
+      <article id="container_form">
+        <form> 
+          <div>
+            <label for="nomeUsuario">Nome</label>
+            <input id="nomeUsuario" name="nome" type="text" required>
+          </div>
+          <div>
+            <label for="idade">Idade</label>
+            <input id="idadeUsuario" name="idade" type="number" required>
+          </div>
+          <select name="sexo" id="sexoUsuario" required>
+            <option value="homem">Homem</option>
+            <option value="homem">Mulher</option>
+          </select>
+
+          <button id="btn_form"> Entrar </button>
+        </form>
+      </article>
+
     </main>
 
 
     <script type="module" src="./modulos/script.js"></script>
+    <script type="module" src="./modulos/form.js"></script>
   </body>
 </html>

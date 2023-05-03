@@ -1,36 +1,11 @@
-// reset dos padrões do navegador
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@use './_partials/index.scss' as *;
 
 
-progress::-webkit-progress-value { 
-    background: red; 
-}
-
-
-$esp-grande: 10%;
-$esp-medio: 5%;
-$esp-pequeno:3%;
-
-$cor-primaria: rgb(151, 17, 17);
-
-body{
-    display: grid;
-    place-items: center;
-    height: 100svh;
-
-}
-
-img{
-    max-width: 100%;
-}
-
-//
 
 #container_card{
+    opacity: 0;
+
+    animation: fade-in .5s forwards;
     background-color: whitesmoke;
     border-radius: 25px;
     padding: $esp-medio;

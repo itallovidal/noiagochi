@@ -1,0 +1,58 @@
+// reset dos padrões do navegador
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$gradiente: linear-gradient(45deg, rgb(1,0,8),
+                                  rgb(100,4,87),
+                                  #2f1755,
+                                  #025964,
+                                  rgb(5,188,113),
+                                  rgb(100,4,87));
+
+progress::-webkit-progress-value { 
+    background: red; 
+}
+
+$tamanho-fonte-grande: 2rem;
+
+$esp-grande: 10%;
+$esp-medio: 5%;
+$esp-pequeno:3%;
+
+$cor-primaria: rgb(151, 17, 17);
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100svh;
+    background-image: url('../images/lua.png'), $gradiente;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: black;
+}
+
+img{
+    max-width: 100%;
+}
+
+@keyframes fade-out {
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    100%{
+        opacity: 1;
+    }
+}
+
+.fade_out{
+    animation: fade-out .5s forwards;
+}
+
+//

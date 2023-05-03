@@ -6,11 +6,16 @@ const dopaminaStatus = document.querySelector('#dopamina')
 const saudeStatus = document.querySelector('#saude')
 const img = document.querySelector("#imagemPersonagem")
 
+
+
+
+
+
 // colecão de propriedades
 const propriedadesPersonagem = [fomeStatus, higieneStatus, sonoStatus, dopaminaStatus, saudeStatus]
 
 // colecao de botoes
-const btns = Array.from(document.querySelectorAll('button'))
+const btns = Array.from(document.querySelectorAll('.btn-interacao'))
 
 //---------------
 
