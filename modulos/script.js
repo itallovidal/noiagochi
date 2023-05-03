@@ -4,11 +4,15 @@ const higieneStatus = document.querySelector('#higiene')
 const sonoStatus = document.querySelector('#sono')
 const dopaminaStatus = document.querySelector('#dopamina')
 const saudeStatus = document.querySelector('#saude')
-
+const img = document.querySelector("#imagemPersonagem")
 
 // colecão de propriedades
 const propriedadesPersonagem = [fomeStatus, higieneStatus, sonoStatus, dopaminaStatus, saudeStatus]
 
+// colecao de botoes
+const btns = Array.from(document.querySelectorAll('button'))
+
+//---------------
 
 // adiciona um evento ao carregar a página
 window.addEventListener('load', ()=>{
@@ -20,8 +24,6 @@ window.addEventListener('load', ()=>{
 })
 
 
-// colecao de botoes
-const btns = Array.from(document.querySelectorAll('button'))
 
 // adicionando evento aos botoes
 for(let btn of btns){
@@ -73,4 +75,20 @@ function atualizaStatus(nomeBarra, status = 0){
     else{
         nomeBarra.value += status
     }
+
+    attFoto()
+}
+
+function attFoto(){
+    if(fomeStatus.value < 35){
+        img.setAttribute('src', './images/fome.png')
+        return
+    }
+
+    if(sonoStatus.value < 35){
+        img.setAttribute('src', './images/sono.png')
+        return
+    }
+
+    img.setAttribute('src', './images/normal.png')
 }
