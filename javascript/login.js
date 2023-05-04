@@ -1,11 +1,11 @@
 const form = document.querySelector('form')
-const joguinho = document.querySelector('#container_card')
-const login = document.querySelector('#container_home')
-
+const container_joguinho = document.querySelector('#container_card')
+const container_login = document.querySelector('#container_home')
 const h1Nome = document.querySelector('#nome')
 const iIdade = document.querySelector('#idade')
+import * as joguinho from './joguinho.js'
 
-export let usuario = {
+export const usuario = {
     nome: null,
     sexo: null,
     idade: null
@@ -18,20 +18,20 @@ form.addEventListener('submit', (e)=>{
     usuario.sexo = document.querySelector('#sexoUsuario').value
     usuario.idade = document.querySelector('#idadeUsuario').value
 
-    login.classList.add('fade_out')
+    container_login.classList.add('fade_out')
 
     setTimeout(()=>{
-        login.style.display = 'none'
-        joguinho.style.display = 'grid'
+        container_login.style.display = 'none'
+        container_joguinho.style.display = 'grid'
     },510)
-
-
 
     h1Nome.innerHTML = usuario.nome
     iIdade.innerHTML = usuario.idade
     
+
+    for(let valor of joguinho.propriedadesPersonagem)
+    {
+        joguinho.atualizaStatus(valor)
+    }
 })
-
-
-const btn_form = document.querySelector('#btn_form')
 

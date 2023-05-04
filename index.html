@@ -22,7 +22,7 @@
 
     <main style="display: none;" id="container_card">
       <div id="container_img">
-        <img src="./images/normal.png" id="imagemPersonagem" alt="imagem">
+        <img src="./imagens/char/normal.png" id="imagemPersonagem" alt="imagem">
       </div>
       
       <div id="container_perfil">
@@ -70,18 +70,18 @@
 
     <main id="container_home">
       <article id="container_img">
-        <img src="./images/fundohome.png" alt="">
+        <img src="./imagens/evento/fundohome.png" alt="">
       </article>
 
       <article id="container_form">
         <form> 
           <div>
             <label for="nomeUsuario">Nome</label>
-            <input id="nomeUsuario" name="nome" type="text" required>
+            <input id="nomeUsuario" name="nome" type="text" pattern="[A-Za-z]{3,}" required>
           </div>
           <div>
             <label for="idade">Idade</label>
-            <input id="idadeUsuario" name="idade" type="number" required>
+            <input id="idadeUsuario" pattern="{2}" name="idade" type="number" required>
           </div>
           <select name="sexo" id="sexoUsuario" required>
             <option value="homem">Homem</option>
@@ -95,7 +95,7 @@
     </main>
 
 
-    <script type="module" src="./modulos/script.js"></script>
-    <script type="module" src="./modulos/form.js"></script>
+    <script type="module" src="./javascript/joguinho.js"></script>
+    <script type="module" src="./javascript/login.js"></script>
   </body>
 </html>

@@ -1,11 +1,5 @@
 @use './_partials/index.scss' as *;
 
-// body{
-//     background-image: linear-gradient(45deg, #000000, #373737);
-// }
-
-
-
 
 #container_home{
     display: grid;
@@ -35,7 +29,7 @@
         height: 40%;
         bottom: -20%;
         left: 0;
-        background-image: url('../images/eventonome.png');
+        background-image: url('../imagens/evento/eventonome.png');
         background-size: 100%;
         background-position: 0;
         background-repeat: no-repeat;

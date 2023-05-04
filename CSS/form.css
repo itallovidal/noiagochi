@@ -12,7 +12,7 @@ body {
   display: grid;
   place-items: center;
   height: 100svh;
-  background-image: url("../images/lua.png"), linear-gradient(45deg, rgb(1, 0, 8), rgb(100, 4, 87), #2f1755, #025964, rgb(5, 188, 113), rgb(100, 4, 87));
+  background-image: url("../imagens/evento/lua.png"), linear-gradient(45deg, rgb(1, 0, 8), rgb(100, 4, 87), #2f1755, #025964, rgb(5, 188, 113), rgb(100, 4, 87));
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -64,7 +64,7 @@ img {
   height: 40%;
   bottom: -20%;
   left: 0;
-  background-image: url("../images/eventonome.png");
+  background-image: url("../imagens/evento/eventonome.png");
   background-size: 100%;
   background-position: 0;
   background-repeat: no-repeat;
