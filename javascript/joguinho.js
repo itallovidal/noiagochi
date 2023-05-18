@@ -61,7 +61,7 @@ export function atualizaStatus(nomeBarra, status = 0, dano){
 
         setTimeout(function(){
             atualizaStatus(nomeBarra)
-        }, 3000)
+        }, 11800)
 
     }else if(status == 2){
         nomeBarra.value -= dano
@@ -84,5 +84,28 @@ function attFoto(){
         return
     }
 
-    img.setAttribute('src', './imagens/char/normal.png')
+    if(higieneStatus.value < 35){
+        img.setAttribute('src', './imagens/char/charsujomasc.png')
+        return
+    }
+
+    if(dopaminaStatus.value < 35){
+        img.setAttribute('src', './imagens/char/normal.png')
+        return
+    }
+
+    if(dopaminaStatus.value > 60){
+        img.setAttribute('src', './imagens/char/chardrogado2.png')
+        return
+    }
+
+    if(dopaminaStatus.value > 98){
+        img.setAttribute ('src', './imagens/char/animal.gif')
+        return
+        
+    }
+    
+    console.log(entrou)
+    img.setAttribute('src', './imagens/char/chardrogado.png')
 }
+

@@ -39,22 +39,31 @@ img {
 
 #container_card {
   opacity: 0;
+  width: min(95%, 800px);
   animation: fade-in 0.5s forwards;
   background-color: whitesmoke;
   border-radius: 25px;
-  padding: 5%;
+  padding: 3%;
   display: grid;
   place-items: center;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.14);
 }
-#container_card #container_img, #container_card #container_perfil, #container_card #container_status {
-  margin-bottom: 5%;
+@media (max-width: 500px) {
+  #container_card {
+    height: 90vh;
+    grid-template-rows: 200px 60px 200px 200px;
+  }
 }
 #container_card #container_perfil, #container_card #container_status {
   text-align: center;
 }
 #container_card #container_perfil h1, #container_card #container_status h1 {
   margin-bottom: 3%;
+}
+@media (max-width: 500px) {
+  #container_card #container_perfil h1, #container_card #container_status h1 {
+    margin: 0 0;
+  }
 }
 #container_card #container_status {
   width: 100%;
@@ -67,14 +76,27 @@ img {
 #container_card #container_status .container_info progress {
   width: 70%;
 }
+#container_card #container_img {
+  height: 20vh;
+}
+#container_card #container_img img {
+  max-height: 100%;
+}
+#container_card #container_acoes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+}
 #container_card #container_acoes button {
   padding: 3%;
   background-color: rgb(151, 17, 17);
   color: white;
   border: none;
   border-radius: 10px;
-  margin-block: 3%;
-  width: 100%;
+  margin-block: 10px;
+  width: 48%;
   font-weight: 500;
   transition: 0.5s;
   cursor: pointer;
