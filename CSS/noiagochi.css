@@ -37,6 +37,14 @@ img {
   animation: fade-out 0.5s forwards;
 }
 
+.exit {
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 #container_card {
   opacity: 0;
   width: min(95%, 800px);

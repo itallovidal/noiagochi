@@ -18,6 +18,7 @@ const btns = Array.from(document.querySelectorAll('.btn-interacao'))
 for(let btn of btns){
     btn.addEventListener('click', function(e){
         const propriedade = Number(e.target.getAttribute('data-status'))
+        console.log(dopaminaStatus.value)
 
         switch (propriedade) {
             case 1:
@@ -61,7 +62,7 @@ export function atualizaStatus(nomeBarra, status = 0, dano){
 
         setTimeout(function(){
             atualizaStatus(nomeBarra)
-        }, 11800)
+        }, 5000)
 
     }else if(status == 2){
         nomeBarra.value -= dano
@@ -74,38 +75,43 @@ export function atualizaStatus(nomeBarra, status = 0, dano){
 }
 
 function attFoto(){
-    if(fomeStatus.value < 35){
-        img.setAttribute('src', './imagens/char/fome.png')
-        return
-    }
-
-    if(sonoStatus.value < 35){
-        img.setAttribute('src', './imagens/char/sono.png')
-        return
-    }
-
-    if(higieneStatus.value < 35){
-        img.setAttribute('src', './imagens/char/charsujomasc.png')
-        return
-    }
-
-    if(dopaminaStatus.value < 35){
-        img.setAttribute('src', './imagens/char/normal.png')
-        return
-    }
-
-    if(dopaminaStatus.value > 60){
-        img.setAttribute('src', './imagens/char/chardrogado2.png')
-        return
-    }
-
-    if(dopaminaStatus.value > 98){
-        img.setAttribute ('src', './imagens/char/animal.gif')
-        return
-        
-    }
+    if(img.classList.contains('exit') != true){
+        if(dopaminaStatus.value > 90){
+            img.setAttribute ('src', './imagens/char/animal.gif')
+            img.classList.add('exit')
+            return
+        }
     
-    console.log(entrou)
-    img.setAttribute('src', './imagens/char/chardrogado.png')
+        if(fomeStatus.value < 35){
+            img.setAttribute('src', './imagens/char/fome.png')
+            return
+        }
+    
+        if(sonoStatus.value < 35){
+            img.setAttribute('src', './imagens/char/sono.png')
+            return
+        }
+    
+        if(higieneStatus.value < 35){
+            img.setAttribute('src', './imagens/char/charsujomasc.png')
+            return
+        }
+    
+        if(dopaminaStatus.value < 35){
+            img.setAttribute('src', './imagens/char/normal.png')
+            return
+        }
+    
+        if(dopaminaStatus.value > 60){
+            img.setAttribute('src', './imagens/char/chardrogado2.png')
+            return
+        }
+    
+    
+        
+        img.setAttribute('src', './imagens/char/chardrogado.png')
+    }
+
+   
 }
 
